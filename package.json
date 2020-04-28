@@ -12,5 +12,5 @@
     "inquirer": "^7.1.0",
     "redbird": "^0.10.0"
   },
-  "bin": "index.js"
+  "bin": "./index.js"
 }
