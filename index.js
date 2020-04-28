@@ -1,3 +1,4 @@
+const commander = require('commander');
 const hostile = require('hostile');
 const redbird = require('redbird');
 const inquirer = require('inquirer');
@@ -5,7 +6,33 @@ require('colors');
 
 const { version } = require('./package.json');
 
-console.log(`lurl v${version}`.green);
+const ldres = new commander.Command();
+ldres.version(version, '-v, --version', 'get the version of ldres');
+
+ldres
+	.command('rproxy')
+	.description('Spins up a small reverse proxy solution')
+	.option('-d, --domain', 'directly specify the domain name to use as a virtual host')
+	.option('-p, --port', 'directly specify the port to reverse-proxy to')
+	.action(() => {
+		console.log("Not implemented yet".rainbow);
+	});
+
+ldres
+	.command('static')
+	.description('Serves a folder as a website')
+	.option('-d, --domain', 'directly specify the domain name to serve the website with')
+	.option('-r, --root', 'path to the folder to serve as root of the website')
+	.action(() => {
+		console.log("Not implemented yet".rainbow);
+	});
+
+ldres.parse(process.argv);
+
+if (ldres.version) {
+	console.log(ldres.version);
+	process.exit();
+}
 
 function cleanHostsFile (domain, callback) {
 	return () => {
