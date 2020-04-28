@@ -1,0 +1,11 @@
+{
+  "name": "lurl",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Camille Briand <camille.briand@efrei.net> (https://camille-briand.fr/)",
+  "license": "MIT",
+  "dependencies": {
+    "hostile": "^1.3.2",
+    "redbird": "^0.10.0"
+  }
+}
