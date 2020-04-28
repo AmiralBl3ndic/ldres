@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Camille Briand <camille.briand@efrei.net> (https://camille-briand.fr/)",
+  "repository": "https://github.com/AmiralBl3ndic/ldres",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
